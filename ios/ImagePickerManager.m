@@ -168,7 +168,8 @@ RCT_EXPORT_METHOD(showImagePicker:(NSDictionary *)options callback:(RCTResponseS
         id durationLimit = [self.options objectForKey:@"durationLimit"];
         if (durationLimit) {
             self.picker.videoMaximumDuration = [durationLimit doubleValue];
-            self.picker.allowsEditing = NO;
+//             self.picker.allowsEditing = NO;
+            self.picker.allowsEditing = true;
         }
     }
     if ([[self.options objectForKey:@"mediaType"] isEqualToString:@"video"]) {
